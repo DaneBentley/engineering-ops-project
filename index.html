@@ -21,7 +21,10 @@
                 <a href="#" class="logo">
                     Operations Management Project
                 </a>
-                <ul class="nav-links">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <i data-lucide="menu"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#about">Introduction</a></li>
                     <li><a href="#operations">Research</a></li>
                     <li><a href="#scaling">Scaling</a></li>
@@ -39,13 +42,11 @@
                 <div class="hero-content">
                     <div class="hero-text">
                         <h1>Operations Management in Engineering</h1>
-                        <p>A research project exploring the processes, systems, and scales of the modern engineering
-                            industry.</p>
-                        <a href="#about" class="tab-btn active" style="display:inline-block; padding: 1rem 2rem;">Read
-                            Research Results</a>
+                        <p>Exploring how things are built, from the smallest details to massive global systems.</p>
                     </div>
                     <div class="hero-image">
-                        <img src="assets/hero.png" alt="Engineering Operations Center">
+                        <img src="https://www.excelsior.edu/wp-content/uploads/2024/06/24-1252832_What-can-you-do-with-an-Electrical-Engineering-Technology-degree__1000x568.jpg"
+                            alt="Engineering Operations Center">
                     </div>
                 </div>
             </div>
@@ -54,31 +55,14 @@
         <!-- Introduction Section -->
         <section id="about" class="container">
             <div class="section-title">
-                <h2>Project Introduction</h2>
-                <p>Engineering is evolving into a technical, ethical, and interdisciplinary field. This research covers
-                    how industry scales, how AI is integrated into workflows, and the broader impact of optimized
-                    systems on the world.</p>
+                <h2>About This Project</h2>
+                <p>I researched operations within the engineering industry to learn what drives it. I wanted to
+                    understand how things scale from small ideas to mass production, see what challenges engineers face
+                    today, and find out what the future holds for the industry. This website shares what I've learned
+                    about how engineering processes shape our world.</p>
             </div>
 
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-icon"><i data-lucide="layers"></i></div>
-                    <h3>Technical Operations</h3>
-                    <p>Analysis of how multidisciplinary teams and data systems are managed in complex engineering
-                        environments.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i data-lucide="trending-up"></i></div>
-                    <h3>Mass Production</h3>
-                    <p>A study of the transition from prototype development to large-scale global manufacturing.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i data-lucide="cpu"></i></div>
-                    <h3>Future Trends</h3>
-                    <p>Investigation into AI, machine learning, and autonomous systems in modern engineering workflows.
-                    </p>
-                </div>
-            </div>
+
         </section>
 
         <!-- Research Q&A (Interactive) -->
@@ -86,62 +70,64 @@
             <div class="container">
                 <div class="section-title">
                     <h2>Research Summary</h2>
-                    <p>Synthesized findings from academic journals and industry technical reports.</p>
+                    <p>What I learned about the core operations and challenges in the engineering industry.</p>
                 </div>
 
                 <div class="tabs-container">
                     <div class="tabs-nav">
-                        <button class="tab-btn active" onclick="showTab('q1')">Core Processes</button>
-                        <button class="tab-btn" onclick="showTab('q2')">Management Systems</button>
-                        <button class="tab-btn" onclick="showTab('q3')">Industry Challenges</button>
+                        <button class="tab-btn active" data-tab="q1">Important Operations</button>
+                        <button class="tab-btn" data-tab="q2">Management Strategies</button>
+                        <button class="tab-btn" data-tab="q3">Common Challenges</button>
                     </div>
 
                     <div id="q1" class="tab-content active">
                         <div class="card">
-                            <h3>Key Engineering Operations</h3>
-                            <p>Current industrial operations prioritize <strong>Value Stream Mapping</strong> and
-                                <strong>Operational Design Coordination</strong>. Focus area include:</p>
+                            <h3>Important Engineering Operations</h3>
+                            <p>The main goal for engineering companies is to deliver good products quickly and
+                                affordably. To do this, they rely on a few key operations.</p>
                             <br>
                             <ul style="list-style: disc; margin-left: 1.5rem;">
-                                <li><strong>Project Coordination:</strong> Managing resources across varied technical
-                                    teams.</li>
-                                <li><strong>Concurrent Engineering:</strong> Running design phases in parallel to
-                                    improve lead times.</li>
-                                <li><strong>Process Controls:</strong> Systems like JIDOKA used for identifying defects
-                                    immediately.</li>
+                                <li><strong>Project Management:</strong> Planning out tasks and schedules so people and
+                                    materials are used efficiently without chaos.</li>
+                                <li><strong>Reducing Waste:</strong> Using approaches like "Lean Manufacturing" to get
+                                    rid of anything that doesn't add value—saving time, space, and effort.</li>
+                                <li><strong>Quality Control tools:</strong> Building systems that catch errors right
+                                    away instead of waiting until the end of the line.</li>
                             </ul>
+                            <br>
+                            <p>Operations management in this industry looks like a lot of careful planning. Managers use
+                                charts and models to organize big teams, and they have to stay flexible when things
+                                change or go wrong.</p>
                         </div>
                     </div>
 
                     <div id="q2" class="tab-content">
                         <div class="card">
-                            <h3>Operations Management Structure</h3>
-                            <p>Engineering management requires high-level planning combined with real-time process
-                                support. In modern industries, this involves <strong>systematic design models</strong>
-                                and <strong>procedural mapping</strong> to handle multi-disciplinary teams and large
-                                datasets.</p>
+                            <h3>How Engineering Teams are Managed</h3>
+                            <p>Managing engineering operations is incredibly complex. Every project is slightly
+                                different, and managers have to organize large teams of people with completely different
+                                skill sets.</p>
                             <br>
-                            <div
-                                style="background: var(--bg-alt); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--primary);">
-                                <strong>Literature Review (Coates et al., 2004):</strong> Traditional management models
-                                often fail in specialized engineering environments. Successful coordination requires
-                                systems that provide "dynamic flexibility."
-                                <br><br>
-                                <em>Remaining Research Questions:</em>
-                                <ul style="list-style: circle; margin-left: 1.5rem; font-size: 0.9rem;">
-                                    <li>Methods for quantifying coordination volume.</li>
-                                    <li>Automated tools for real-time scheduling updates.</li>
-                                </ul>
-                            </div>
+                            <p>A good management system relies on clear top-down planning. Managers schedule people,
+                                tools, and money carefully to keep everything running on time. However, because new
+                                problems constantly pop up, management also has to provide real-time support to adapt to
+                                changes quickly. It's all about balancing a strict plan with the flexibility to handle
+                                surprises.</p>
                         </div>
                     </div>
 
                     <div id="q3" class="tab-content">
                         <div class="card">
-                            <h3>Common Industry Challenges</h3>
-                            <p>Firms face high capital requirements for production facilities and heavy dependency on
-                                global supply chains. Infrastructure maintenance is a primary risk factor, requiring
-                                "preventative rather than reactive" management strategies.</p>
+                            <h3>Current Issues and Challenges</h3>
+                            <p>Engineers face a few major hurdles today. First, things are expensive. Setting up
+                                facilities to build products costs a lot of money, and companies often get caught off
+                                guard by the price tag.</p>
+                            <br>
+                            <p>Second, engineering relies on global supply chains. If one part from another country is
+                                late, the whole project can stop. Finally, there's our aging infrastructure. Things
+                                built in the past are eventually going to fail. It's much safer and cheaper to maintain
+                                old systems now than wait for them to break, but it's hard to get people and politicians
+                                to care about basic infrastructure until it's too late.</p>
                         </div>
                     </div>
                 </div>
@@ -153,48 +139,51 @@
             <div class="content-block">
                 <div class="block-text">
                     <h3>Scaling to Mass Production</h3>
-                    <p>Data suggests that nearly 20% of engineering time is spent on reactive problem-solving. Proper
-                        industrial handoff requires these five technical pillars:</p>
+                    <p>Moving from a small idea to mass production is tough, and many companies aren't ready for it. In
+                        fact, engineers spend nearly 20% of their time just trying to fix problems as they pop up. To
+                        scale successfully, companies need to have five main things ready:</p>
 
                     <div class="scaling-list">
                         <div class="scaling-item">
                             <div class="scaling-index">1</div>
                             <div>
-                                <strong>BOM (Bill of Materials):</strong> Detailed technical list for supply chain
-                                management.
+                                <strong>Bill of Materials:</strong> A complete list of every single part needed to build
+                                the product.
                             </div>
                         </div>
                         <div class="scaling-item">
                             <div class="scaling-index">2</div>
                             <div>
-                                <strong>CAD Models:</strong> Digital design files for production guidance.
+                                <strong>3D Models:</strong> Detailed digital models that show the manufacturer exactly
+                                what to build.
                             </div>
                         </div>
                         <div class="scaling-item">
                             <div class="scaling-index">3</div>
                             <div>
-                                <strong>Blueprints:</strong> Detailed documentation for material tolerances and
-                                assembly.
+                                <strong>Blueprints:</strong> Specific drawings that list all the required measurements
+                                and quality standards.
                             </div>
                         </div>
                         <div class="scaling-item">
                             <div class="scaling-index">4</div>
                             <div>
-                                <strong>Contact Points:</strong> Technical support designated for manufacturing
-                                oversight.
+                                <strong>A Reliable Contact:</strong> Someone who can quickly answer questions from the
+                                factory floor.
                             </div>
                         </div>
                         <div class="scaling-item">
                             <div class="scaling-index">5</div>
                             <div>
-                                <strong>Business Case Analysis:</strong> Strategic analysis of mass production
-                                viability.
+                                <strong>A Business Plan:</strong> A rigorous look at the who, what, when, where, and why
+                                of producing the item on a massive scale.
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="block-image">
-                    <img src="assets/scaling.png" alt="Scaling Engineering Production">
+                    <img src="https://cdn.britannica.com/52/186052-050-0EB59F07/assembly-line-factory-Ford-Wayne-Michigan-2011.jpg"
+                        alt="Scaling Engineering Production">
                 </div>
             </div>
         </section>
@@ -203,38 +192,38 @@
         <section id="trends" class="trends-bg">
             <div class="container">
                 <div class="section-title">
-                    <h2>Future Trends (2025)</h2>
-                    <p>Current technological developments shaping the engineering industry.</p>
+                    <h2>Future Trends in Engineering</h2>
+                    <p>The industry is changing fast. Here is what we can expect to see more of in the near future.</p>
                 </div>
 
                 <div class="trends-grid">
                     <div class="trend-card">
                         <div class="card-icon" style="background: rgba(255,255,255,0.1); color:white;"><i
                                 data-lucide="bot"></i></div>
-                        <h3>AI & ML Systems</h3>
-                        <p>Automation tools assist with predictive maintenance and generative design, allowing engineers
-                            to focus on higher-level system management.</p>
+                        <h3>AI and Automation</h3>
+                        <p>Engineers are using AI to design things better and predict when machines need maintenance. AI
+                            will do more of the manual work, letting engineers focus on creative thinking.</p>
                     </div>
                     <div class="trend-card">
                         <div class="card-icon" style="background: rgba(255,255,255,0.1); color:white;"><i
                                 data-lucide="shield-check"></i></div>
-                        <h3>Ethics in Design</h3>
-                        <p>Implementation of frameworks like IEEE 7000 to ensure ethical considerations are built into
-                            the design phase of new systems.</p>
+                        <h3>Built-in Ethics</h3>
+                        <p>Ethics is no longer just a checkbox. Things like AI and robotics have big impacts on society,
+                            so engineers are now designing systems with ethics built in from the very start.</p>
                     </div>
                     <div class="trend-card">
                         <div class="card-icon" style="background: rgba(255,255,255,0.1); color:white;"><i
                                 data-lucide="Zap"></i></div>
-                        <h3>Quantum Simulations</h3>
-                        <p>Using quantum-enhanced tools to optimize complex problems in hardware design and fluid
-                            dynamics.</p>
+                        <h3>Smarter Systems</h3>
+                        <p>Fields like biotechnology, AI, and advanced sensors are coming together to create smart
+                            systems that will transform farming, healthcare, and city infrastructure.</p>
                     </div>
                     <div class="trend-card">
                         <div class="card-icon" style="background: rgba(255,255,255,0.1); color:white;"><i
                                 data-lucide="printer"></i></div>
-                        <h3>Adaptive Manufacturing</h3>
-                        <p>Decentralized production through industrial 3D printing in fields like aerospace and
-                            medicine.</p>
+                        <h3>3D Printing</h3>
+                        <p>Industrial 3D printing is opening up new possibilities, allowing places like hospitals and
+                            aerospace companies to print final products right when they need them.</p>
                     </div>
                 </div>
             </div>
@@ -244,41 +233,29 @@
         <section id="impact" class="container">
             <div class="content-block">
                 <div class="block-image">
-                    <img src="assets/ethical.png" alt="Engineering for a Better World">
+                    <img src="https://www.scu.edu/media/mobi/blog-variants/Ethics-Blog-760x550-760x550.png"
+                        alt="Engineering for a Better World">
                 </div>
                 <div class="block-text" style="direction: ltr;">
-                    <h3>Global Impact and Ethics</h3>
-                    <p>Industrial systems engineering translates user requirements into functional societal
-                        infrastructure. Research indicates that implementing <strong>LEAN systems</strong> and
-                        human-centric design significantly improves output and safety.</p>
-                    <ul style="list-style: none; margin-top: 1rem;">
-                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check-circle"
-                                style="color:var(--accent); display:inline-block; vertical-align:middle; margin-right: 0.5rem;"></i>
-                            Efficiency improvements up to 66%</li>
-                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check-circle"
-                                style="color:var(--accent); display:inline-block; vertical-align:middle; margin-right: 0.5rem;"></i>
-                            Inventory reductions up to 80%</li>
-                        <li style="margin-bottom: 0.5rem;"><i data-lucide="check-circle"
-                                style="color:var(--accent); display:inline-block; vertical-align:middle; margin-right: 0.5rem;"></i>
-                            Enhanced public safety through predictive maintenance</li>
-                    </ul>
+                    <h3>Making the World Better</h3>
+                    <p>We can take engineering a step further by remembering that it's all about people. Engineers are
+                        the ones who take what users need and turn it into the real infrastructure around us.</p>
+                    <br>
+                    <p>Whether it's making a theme park flow smoothly so families have fun or just making sure the power
+                        stays on, good engineering makes life better. We can improve the world by paying attention to
+                        the infrastructure we use every day, advocating for its maintenance, and keeping systems safe
+                        for everyone who uses them. By designing with people in mind, we build a much better future.</p>
                     <br>
                     <p
                         style="font-size: 0.9rem; color: var(--text-light); border-top: 1px solid #eee; padding-top: 1rem;">
-                        <strong>Sources Cited:</strong> Asamaka Industries (2025), Journal of Engineering Design (2004),
-                        TEDx Subhashini Ganapathy, TED Grady Hillhouse.
+                        <strong>Key Takeaway:</strong> Engineering isn't just about math and machines; it's a creative
+                        field that improves how we all live.
                     </p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer
-        style="background: #f8fafc; border-top: 1px solid #e2e8f0; padding: 40px 0; color: #64748b; text-align: center;">
-        <div class="container">
-            <p>&copy; 2026 Engineering Operations Research Project. Created for educational purposes.</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
     <script>
